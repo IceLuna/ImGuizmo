@@ -694,8 +694,8 @@ namespace ImGuizmo
    static const char* translationInfoMask[] = { "X : %5.3f", "Y : %5.3f", "Z : %5.3f",
       "Y : %5.3f Z : %5.3f", "X : %5.3f Z : %5.3f", "X : %5.3f Y : %5.3f",
       "X : %5.3f Y : %5.3f Z : %5.3f" };
-   static const char* scaleInfoMask[] = { "X : %5.2f", "Y : %5.2f", "Z : %5.2f", "XYZ : %5.2f" };
-   static const char* rotationInfoMask[] = { "X : %5.2f deg %5.2f rad", "Y : %5.2f deg %5.2f rad", "Z : %5.2f deg %5.2f rad", "Screen : %5.2f deg %5.2f rad" };
+   static const char* scaleInfoMask[] = { "X : %5.3f", "Y : %5.3f", "Z : %5.3f", "XYZ : %5.3f" };
+   static const char* rotationInfoMask[] = { "X : %5.3f deg %5.3f rad", "Y : %5.3f deg %5.3f rad", "Z : %5.3f deg %5.3f rad", "Screen : %5.3f deg %5.3f rad" };
    static const int translationInfoIndex[] = { 0,0,0, 1,0,0, 2,0,0, 1,2,0, 0,2,0, 0,1,0, 0,1,2 };
    static const float quadMin = 0.5f;
    static const float quadMax = 0.8f;
@@ -1577,7 +1577,7 @@ namespace ImGuizmo
             // info text
             char tmps[512];
             ImVec2 destinationPosOnScreen = worldToPos(gContext.mModel.v.position, gContext.mViewProjection);
-            ImFormatString(tmps, sizeof(tmps), "X: %.2f Y: %.2f Z:%.2f"
+            ImFormatString(tmps, sizeof(tmps), "X: %.3f Y: %.3f Z:%.3f"
                , (bounds[3] - bounds[0]) * gContext.mBoundsMatrix.component[0].Length() * scale.component[0].Length()
                , (bounds[4] - bounds[1]) * gContext.mBoundsMatrix.component[1].Length() * scale.component[1].Length()
                , (bounds[5] - bounds[2]) * gContext.mBoundsMatrix.component[2].Length() * scale.component[2].Length()
