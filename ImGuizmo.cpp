@@ -1034,6 +1034,11 @@ namespace IMGUIZMO_NAMESPACE
       }
    }
 
+   bool IsEnabled()
+   {
+      return gContext.mbEnable;
+   }
+
    static void ComputeContext(const float* view, const float* projection, float* matrix, MODE mode)
    {
       gContext.mMode = mode;

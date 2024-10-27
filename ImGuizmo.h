@@ -143,6 +143,9 @@ namespace IMGUIZMO_NAMESPACE
    // gizmo is rendered with gray half transparent color when disabled
    IMGUI_API void Enable(bool enable);
 
+   // return true if enabled
+   IMGUI_API bool IsEnabled();
+
    // helper functions for manualy editing translation/rotation/scale with an input float
    // translation, rotation and scale float points to 3 floats each
    // Angles are in degrees (more suitable for human editing)
